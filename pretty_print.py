@@ -12,17 +12,25 @@
 def pretty_print(dictionary, indent):
     # Write code here
     for key in dictionary:
+        # print(key)
         value = dictionary[key]
+        if(type (value)== dict):
+        # return(pretty_print(value))
+            return pretty_print(value, indent)
+        print("{}{}:{}".format(indent, key, value))
+
+       
+
         
-    pass
+
 
 o1 = {"a": 1, "b": 2}
 o2 = {"a": 1, "b": 2, "c": {"name": "Bruce Wayne", "occupation": "Hero"}, "d": 4}
 o3 = {"a": 1, "b": 2, "c": {"name": "Bruce Wayne", "occupation": "Hero", "friends": {"spiderman": {"name": "Peter Parker"}, "superman": {"name": "Clark Kent"}}}, "d": 4}
 
-# print(pretty_print(o1, "-"))
-# print(pretty_print(o2, " "))
-# print(pretty_print(o3, ".."))
+print(pretty_print(o1, "-"))
+print(pretty_print(o2, " "))
+print(pretty_print(o3, ".."))
 # ..a: 1
 # ..b: 2
 # ..c:
