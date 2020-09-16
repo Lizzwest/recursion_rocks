@@ -11,6 +11,9 @@
 
 def pretty_print(dictionary, indent):
     # Write code here
+    for key in dictionary:
+        value = dictionary[key]
+        
     pass
 
 o1 = {"a": 1, "b": 2}
