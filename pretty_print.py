@@ -14,10 +14,17 @@ def pretty_print(dictionary, indent):
     for key in dictionary:
         # print(key)
         value = dictionary[key]
-        if(type (value)== dict):
-        # return(pretty_print(value))
-            return pretty_print(value, indent)
-        print("{}{}:{}".format(indent, key, value))
+        #using isinstance built in python method to check for true or false on whether or not the value exista in the d
+        if isinstance(value, dict):
+            # print(f"{indent}{key}:")
+            pretty_print(dictionary[key], indent + indent)
+        else:
+            print(f"{indent}{key}: {value}")
+           
+        # if(type (value)== dict):
+        # # return(pretty_print(value))
+        #     return pretty_print(value, indent)
+        # print("{}{}:{}".format(indent, key, value))
 
        
 

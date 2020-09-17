@@ -9,6 +9,8 @@
 def coin_flips(n):
     let result = []
     # Write code here
+    if n == 1:
+        return ["H", "T"]
     pass
 return result
 
